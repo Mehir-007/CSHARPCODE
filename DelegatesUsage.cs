@@ -19,6 +19,7 @@ class Demo
         list.Add(new Employee() { Id = 101, Name = "Shiv", Salary = 100000, Experience = 3 });
         IsPromotable isPromotable = new IsPromotable(Promote); //Instance if an delegate
         Employee.PromoteEmployee(list, isPromotable); //Passing a delegate which is actually a funtion pointer hence passing a function
+        //Employee.PromoteEmployee(list, emp => emp.Experience >= 5); //Using Lamda expression creates a deligate,function at runtime and passes it.
     }
     public static bool Promote(Employee emp)
     {
